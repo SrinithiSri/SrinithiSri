@@ -1,36 +1,37 @@
 #include <stdio.h>
-#include <conio.h>
-void main()
+
+int main()
 {
-    int n,i,t,count=0,rem=0,ans=0,mul=1;
-    clrscr();
-    printf("enter n");
-    scanf("%d",&n);
-    t=n;
-    while(t>0)
+    int a,b,i,j,t,rem=0,ans=0,c=0,mul=1;
+    printf("enter a and b");
+    scanf("%d%d",&a,&b);
+    for(i=a;i<b;i++)
     {
-        t=t/10;
-        count++;
-    }
-    t=n;
-    while(t>0)
-    {
-        rem=t%10;
-        for(i=1;i<=count;i++)
+        t=i;
+        c=0;
+        while(t>0)
         {
-            mul=mul*rem;
+            t=t/10;
+            c++;
         }
-        ans=ans+mul;
-        t=t/10;
+        t=i;
+        ans=0;
+        while(t)
+        {
+            rem=t%10;
+            mul=1;
+            for(j=1;j<=c;j++)
+            {
+                mul=mul*rem;
+            }
+            ans=ans+mul;
+            t=t/10;
+        }
+        if(ans==i)
+        {
+            printf("%d",ans);
+        }
     }
-    mul=1;
-    if(ans==n)
-    {
-        printf("yes");
-    }
-    else
-    {
-        printf("no");
-    }
-    getch();
+    return 0;
 }
+
