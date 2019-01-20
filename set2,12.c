@@ -13,11 +13,11 @@ int main()
     }
     if(temp==pal)
     {
-        printf("palindrome");
+        printf("yes");
     }
     else
     {
-        printf("not");
+        printf("no");
     }
     return 0;
 }
