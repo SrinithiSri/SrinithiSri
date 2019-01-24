@@ -9,9 +9,16 @@ int main()
     {
         l++;
     }
+    if(l<=100000)
+    {
     for(i=l-1;i>=0;i--)
     {
         printf("%c",a[i]);
+    }
+    }
+    else
+    {
+        printf("invalid");
     }
     return 0;
 }
