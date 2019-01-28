@@ -1,6 +1,7 @@
+#include<stdio.h>
 int main()
 {
-    long int n,a[100000],t;
+    long int n,a[100000],temp;
     scanf("%ld",&n);
     if(n>=1 && n<=100000)
     {
@@ -15,9 +16,9 @@ int main()
            {
                if(a[i]>a[j])
             {
-                t=a[i];
+                temp=a[i];
                 a[i]=a[j];
-                a[j]=t;
+                a[j]=temp;
             }
            }
         
