@@ -1,16 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int a[50],n,i;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
+    int min,hr=0;
+    scanf("%d",&min);
+    while(min>=60)
     {
-        scanf("%d",&a[i]);
+        hr=hr+1;
+        min=min-60;
     }
-    for(i=0;i<n;i++)
-    {
-        printf("%d %d\n",a[i],i);
-    }
-
+    printf("%d %d",hr,min);
 return 0;
 }
+
+    
