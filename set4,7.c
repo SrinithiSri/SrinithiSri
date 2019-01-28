@@ -1,29 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    char a[100];
-    int i,c=0,s=0;
-    gets(a); 
-    for(i=0;a[i]!='\0';i++)
+    if(s1&&s2>=0 && s1&&s2<=100000)
     {
-        c++;
+    long int s1,s2,t;
+    scanf("%ld %ld",&s1,&s2);
+    t=s1;
+    s1=s2;
+    s2=t;
+    printf("%ld %ld",s1,s2);
     }
-    for(i=0;i<c;i++)
-    {
-        if(a[i]>='0' && a[i]<='9')
-        {
-            s++;
-        }
-    }
-    if(s==c)
-    {
-        printf("yes");
-    }
-    else
-    {
-        printf("no");
-    }
-
-
     return 0;
 }
+
+ 
